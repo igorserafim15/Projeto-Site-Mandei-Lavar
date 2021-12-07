@@ -1,22 +1,165 @@
 // Banner
-.banner-bg {
-  background: url('img/banner.jpg') no-repeat center;
+.banner-contato-bg {
+  background: url('img/contato/image-contato.jpg') no-repeat center;
   background-size: cover;
+  .banner-contato {
+    min-height: 80rem;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    padding: 0rem 1rem;
+    .text-banner {
+      flex: 3;
+      h1 {
+        color: white;
+      }
+      p {
+        margin: 3rem 0rem;
+        font-weight: bold;
+        color: white;
+      }
+    }
+    .banner-form {
+      flex: 2;
+      background: white;
+      padding: 5rem;
+      border-radius: 2rem;
+      box-shadow: 5px 5px 20px #0003;
+      label {
+        display: block;
+        font-size: 2rem;
+        font-weight: bold;
+        color: $color-3;
+        margin: 3rem 0rem 1rem;
+        &:first-child {
+          margin-top: 0rem;
+        }
+      }
+      input, select, textarea {
+        width: 100%;
+        background-color: $color-6;
+        border: none;
+        border-radius: 3rem;
+        outline: none;
+        padding: 1rem 1.5rem;
+        box-sizing: border-box;
+      }
+      select {
+        cursor: pointer;
+      }
+      option[value=""][disabled] {
+        display: none;
+      }
+      textarea {
+        border-radius: 1rem;
+        resize: vertical;
+        min-height: 12rem;
+        max-height: 20rem;
+      }
+      button {
+        border: none;
+        min-width: 17rem;
+        margin-top: 1rem;
+        float: right;
+        cursor: pointer;
+      }
+    }
+  }
 }
-.banner {
-  min-height: 80rem;
+
+// FAQ
+.faq {
+  padding: 10rem 1rem 15rem;
+  span, h2 {
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .faq-container {
+    display: flex;
+    gap: 5rem;
+    margin-top: 8rem;
+    .faq-accordion {
+      flex: 1;
+      dt {
+        background: $color-1;
+        color: white;
+        font-weight: bold;
+        padding: 1.5rem 2rem;
+        border-radius: 1rem;
+        cursor: pointer;
+      }
+      dt.show {
+        background: #F5F5F5;
+        color: $color-3;
+        border-radius: 1rem 1rem 0 0 ;
+      }
+      dd {
+        background: #F5F5F5;
+        padding: 1.5rem 2rem;
+        border-radius: 0rem 0rem 1rem 1rem;
+        // dropdown
+        visibility: hidden;
+        opacity: 0;
+        max-height: 0rem;
+        transform: translateY(-3rem);
+        transition: .2s;
+      }
+      dd.show {
+        visibility: visible;
+        opacity: 1;
+        max-height: 30rem;
+        transform: translateY(0rem);
+        margin-bottom: 1rem;
+      }
+    }
+    .faq-img {
+      flex: 1;
+    }
+  }
+}
+
+// Testimonials
+.testimonials-bg {
+  background: $color-6;
+  .testimonials {
+    padding: 10rem 1rem 15rem;
+    h2, span {
+      text-align: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .testimonials-container {
+      margin-top: 7rem;
+      display: flex;
+      justify-content: center;
+      .testimonial-box {
+        max-width: 85rem;
+        margin: 0% 7rem;
+        background: white;
+        padding: 4rem 4rem 4rem 7rem;
+        border-radius: 2rem;
+        box-shadow: 5px 5px 20px #0002;
+        position: relative;
+        .te-photo {
+          width: 12rem;
+          position: absolute;
+          top: 2rem;
+          left: -7rem;
+        }
+      }
+    }
+  }
+}
+
+// Clients
+.clients {
+  padding: 10rem 1rem;
   display: flex;
-  align-items: center;
-  padding: 0rem 1rem;
-  .text-banner {
-    max-width: 70rem;
-    h1 {
-      color: white;
-    }
-    > p {
-      margin: 3rem 0rem;
-      font-weight: bold;
-    color: white;
-    }
+  justify-content: space-between;
+  gap: 4rem;
+  .client-brand {
+    flex: 1;
+    max-width: 20rem;
   }
 }

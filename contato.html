@@ -31,7 +31,7 @@
 
   <!-- Header  -->
   <header class="header container">
-    <div class="logo"><img src="img/logo.svg" alt="Logo Mandei Lavar"></div>
+    <div class="logo"><a href="index.html"><img src="img/logo.svg" alt="Logo Mandei Lavar"></a></div>
 
     <ul class="header-menu">
       <li><a href="#">Home</a></li>
@@ -45,11 +45,11 @@
   </header>
 
   <!-- Banner -->
-  <section class="banner-bg">
-    <div class="banner container">
+  <section class="banner-contato-bg">
+    <div class="banner-contato container">
       <div class="text-banner">
         <h1>Preencha o formulário para agendar sua próxima limpeza</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
 
       <div class="banner-form">
@@ -62,6 +62,7 @@
 
           <label for="service">Qual serviço você precisa?</label>
           <select name="service" id="service">
+            <option value="" disabled selected>Selecione</option>
             <option value="higienizacao">Higienização</option>
             <option value="impermeabilizacao">Impermeabilização</option>
             <option value="estetica-automotiva">Estética Automotiva</option>
@@ -80,33 +81,56 @@
 
   <!-- FAQ -->
   <section class="faq container">
-    <span class="sub-text">Sobre nós</span>
-    <h2>Conheça mais sobre a nossa empresa e equipe</h2>
+    <span class="sub-text">Tire sua dúvidas</span>
+    <h2>Perguntas mais frequentes</h2>
 
     <div class="faq-container">
-      <div class="faq-accordion">
+      <dl class="faq-accordion">
+        <dt class="show">A higienização é feita a domicílio?</dt>
+        <dd class="show">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta mollitia nam quasi culpa itaque dolorum, ea pariatur consequuntur? Ducimus, cumque.</dd>
 
-      </div>
+        <dt>Quanto tempo leva para o estofado secar?</dt>
+        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta mollitia nam quasi culpa itaque dolorum, ea pariatur consequuntur? Ducimus, cumque.</dd>
 
-      <div class="faq-img"><img src="img/image-about.jpg" alt="Homem higienizando estofado."></div>
+        <dt>Preciso levar o carro até vocês?</dt>
+        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta mollitia nam quasi culpa itaque dolorum, ea pariatur consequuntur? Ducimus, cumque.</dd>
+
+        <dt>Os produtos que vocês usam danifica o tecido?</dt>
+        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta mollitia nam quasi culpa itaque dolorum, ea pariatur consequuntur? Ducimus, cumque.</dd>
+
+        <dt>A impermeabilização vale a pena?</dt>
+        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta mollitia nam quasi culpa itaque dolorum, ea pariatur consequuntur? Ducimus, cumque.</dd>
+
+      </dl>
+
+      <div class="faq-img"><img src="img/contato/image-faq.jpg" alt="Homem higienizando estofado."></div>
     </div>
   </section>
 
   <!-- Testimonials  -->
   <section class="testimonials-bg">
     <div class="testimonials container">
-      <span class="sub-text">Nossas soluções</span>
-      <h2>Conheça os nossos serviços</h2>
+      <span class="sub-text">Depoimentos de clientes</span>
+      <h2>O que os nossos clientes estão falando?</h2>
 
       <div class="testimonials-container">
+        <div class="testimonial-box">
+          <div class="te-photo"><img src="img/contato/photo.png" alt="Foto de cliente"></div>
 
+          <div class="te-text">
+            <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Ipsum has been the industry's standard dummy text ever since. Lorem is simply dummy of the printing and typesetting industry. been the industry's text ever since."</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Clients  -->
   <section class="clients container">
-
+    <div class="client-brand"><img src="img/contato/walmart.png" alt="Walmart"></div>
+    <div class="client-brand"><img src="img/contato/microsoft.png" alt="Microsoft"></div>
+    <div class="client-brand"><img src="img/contato/sony.png" alt="Sony"></div>
+    <div class="client-brand"><img src="img/contato/spotify.png" alt="Spotyfy"></div>
   </section>
 
   <!-- Footer  -->
@@ -159,6 +183,7 @@
     </div>
   </footer>
 
+  <script src="main.js"></script>
 </body>
 
 </html>

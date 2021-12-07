@@ -37,6 +37,15 @@
     }
   }
 }
+@include breackpoints(sml-up) {
+  .upside {
+    justify-content: flex-end;
+    .social {
+      display: none;
+    }
+  }
+  
+}
 
 // Header
 .header {
@@ -54,6 +63,7 @@
     gap: 1rem;
     li a {
       font-weight: bold;
+      font-size: 1.6rem;
       padding: 1.5rem;
       &:hover {
         color: $color-1;
@@ -65,6 +75,16 @@
         color: white;
       }
     }
+  }
+}
+@include breackpoints(lge) {
+  .header-menu a.btn-2 {
+    display: none;
+  }
+}
+@include breackpoints(med) {
+  .header .header-menu {
+    display: none;
   }
 }
 
@@ -90,21 +110,32 @@
     }
   }
 }
+@include breackpoints(lge) {
+  .banner-bg .banner .text-banner {
+    margin: auto;
+    text-align: center;
+  }
+}
 
 // Services Details
 .services-details {
+  height: 35rem;
   display: flex;
+  align-items: flex-end;
   gap: 2rem;
   position: relative;
-  top: -7rem;
-  padding: 0rem 1rem;
+  top: -18rem;
+  padding: 2rem 1rem;
+  overflow-x: auto;
+  
   .services-details-box {
-    flex: 1;
+    flex: 1 0 20rem;
     background: white;
     padding: 3rem;
     box-shadow: 5px 5px 20px #0003;
     border-radius: 2rem;
     position: relative;
+    overflow: hidden;
     > img {
       width: 50%;
       margin-bottom: 3rem;
@@ -123,7 +154,18 @@
       }
     }
     p {
-      margin-top: 2rem;
+      opacity: 0;
+      visibility: hidden;
+      height: 0;
+      transform: translateY(20px);
+      transition: .3s;
+    }
+    &:hover p {
+      margin: 2rem 0rem;
+      opacity: 1;
+      visibility: visible;
+      height: 70px;
+      transform: translateY(0);
     }
   }
 }
@@ -131,13 +173,17 @@
 // About
 .about {
   display: flex;
-  gap: 10rem;
-  padding: 10rem 1rem 15rem;
+  flex-wrap: wrap;
+  gap: 6rem;
+  padding: 0rem 1rem 15rem;
+  justify-content: center;
   .about-img {
-    flex: 1;
+    flex: 1 1 41rem;
+    max-width: 57rem;
   }
   .about-text {
-    flex: 1;
+    flex: 1 1 41rem;
+    max-width: 57rem;
     h2 {
       margin: 2rem 0rem;
     }
@@ -166,9 +212,10 @@
   }
   .services-category {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     .box {
-      flex: 1;
+      flex: 1 1 30rem;
       position: relative;
       > div img {
         border-radius: 2.1rem;
@@ -181,13 +228,19 @@
         position: absolute;
         bottom: -15rem;
         box-shadow: 5px 5px 20px #0001;
-        h4 {
-          margin-bottom: 2rem;
+        p {
+          margin: 2rem 0rem;
         }
         a {
           display: inline-block;
           font-weight: bold;
           color: $color-1;
+          padding: 1rem 2rem;
+          border-radius: 1rem;
+          transition: .2s;
+          &:hover {
+            background: #0001;
+          }
         }
       }
     }
@@ -205,15 +258,17 @@
 
   .pricing-container {
     display: flex;
-    gap: 2rem;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
     .price-box {
+      flex: 0 0 240px;
       box-shadow: 5px 5px 20px #0002;
       padding: 4.5rem;
       border-radius: 2rem;
       transition: .3s;
       &:hover {
-        transform: translateY(-15px);
+        transform: translateY(-10px);
         box-shadow: 5px 5px 20px #0003;
       }
       span {
@@ -242,10 +297,11 @@
 }
 .footer {
   display: flex;
-  gap: 4rem;
+  flex-wrap: wrap;
+  gap: 5rem;
   padding: 10rem 1rem 10rem;
   > div {
-    flex: 1;
+    flex: 1 1 20rem;
     img {
       width: 50%;
       margin-bottom: 2rem;
