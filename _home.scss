@@ -1,0 +1,277 @@
+// Upside
+.upside-bg {
+  background: $color-3;
+}
+.upside {
+  min-height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 1rem;
+  .social {
+    display: flex;
+    gap: 2rem;
+    li a img {
+      width: 3rem;
+      transition: .3s;
+      &:hover {
+        transform: translateY(-3px);
+      }
+    }
+  }
+  .phone {
+    background: $color-2;
+    min-height: 6rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding: 0rem 2rem;
+    p {
+      color: white;
+      font-weight: bold;
+      font-size: 2.2rem;
+      transition: .3s;
+      &:hover {
+        color: $color-3;
+      }
+    }
+  }
+}
+
+// Header
+.header {
+  display: flex;
+  min-height: 10rem;
+  align-items: center;
+  justify-content: space-between;
+  padding:  0rem 1rem;
+  .logo img {
+    width: 12rem;
+  }
+  .header-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    li a {
+      font-weight: bold;
+      padding: 1.5rem;
+      &:hover {
+        color: $color-1;
+      }
+    }
+    li a.btn-2 {
+      padding: 1.2rem 3rem;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+// Banner
+.banner-bg {
+  background: url('img/banner.jpg') no-repeat center;
+  background-size: cover;
+}
+.banner {
+  min-height: 80rem;
+  display: flex;
+  align-items: center;
+  padding: 0rem 1rem;
+  .text-banner {
+    max-width: 70rem;
+    h1 {
+      color: white;
+    }
+    > p {
+      margin: 3rem 0rem;
+      font-weight: bold;
+    color: white;
+    }
+  }
+}
+
+// Services Details
+.services-details {
+  display: flex;
+  gap: 2rem;
+  position: relative;
+  top: -7rem;
+  padding: 0rem 1rem;
+  .services-details-box {
+    flex: 1;
+    background: white;
+    padding: 3rem;
+    box-shadow: 5px 5px 20px #0003;
+    border-radius: 2rem;
+    position: relative;
+    > img {
+      width: 50%;
+      margin-bottom: 3rem;
+    }
+    h4 {
+      color: $color-4;
+      &::before {
+        content: '01';
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 3rem;
+        color: #0001;
+        font-weight: bold;
+        font-size: 7rem;
+      }
+    }
+    p {
+      margin-top: 2rem;
+    }
+  }
+}
+
+// About
+.about {
+  display: flex;
+  gap: 10rem;
+  padding: 10rem 1rem 15rem;
+  .about-img {
+    flex: 1;
+  }
+  .about-text {
+    flex: 1;
+    h2 {
+      margin: 2rem 0rem;
+    }
+    p+p {
+      margin-top: 1.5rem;
+    }
+    
+    li+li {
+      padding-top: 1.5rem;
+    }
+  }
+}
+
+// Services
+.services-bg {
+  background: $color-6;
+}
+.services {
+  padding: 10rem 1rem 25rem;
+  text-align: center;
+  > span {
+    justify-content: center;
+  }
+  h2 {
+    margin: 1rem 0rem 6rem;
+  }
+  .services-category {
+    display: flex;
+    gap: 2rem;
+    .box {
+      flex: 1;
+      position: relative;
+      > div img {
+        border-radius: 2.1rem;
+      }
+      .box-text {
+        background: white;
+        padding: 3rem;
+        border-radius: 2rem;
+        margin: 2.5rem;
+        position: absolute;
+        bottom: -15rem;
+        box-shadow: 5px 5px 20px #0001;
+        h4 {
+          margin-bottom: 2rem;
+        }
+        a {
+          display: inline-block;
+          font-weight: bold;
+          color: $color-1;
+        }
+      }
+    }
+  }
+}
+
+// Pricing
+.pricing {
+  text-align: center;
+  padding: 10rem 1rem 15rem;
+  p {
+    margin: 2rem auto 6rem;
+    max-width: 60rem;
+  }
+
+  .pricing-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+    .price-box {
+      box-shadow: 5px 5px 20px #0002;
+      padding: 4.5rem;
+      border-radius: 2rem;
+      transition: .3s;
+      &:hover {
+        transform: translateY(-15px);
+        box-shadow: 5px 5px 20px #0003;
+      }
+      span {
+        display: inline-block;
+        font-size: 4rem;
+        font-weight: bold;
+        color: $color-1;
+        margin-top: 2rem;
+      }
+      ul {
+        text-align: start;
+        li+li {
+          margin: 1.5rem 0rem;
+        }
+      }
+      > a {
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+// Footer 
+.footer-bg {
+  background: $color-3;
+}
+.footer {
+  display: flex;
+  gap: 4rem;
+  padding: 10rem 1rem 10rem;
+  > div {
+    flex: 1;
+    img {
+      width: 50%;
+      margin-bottom: 2rem;
+    }
+    h4 {
+      color: $color-1;
+      margin-bottom: 2rem;
+      margin-left: 1rem;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+    li a {
+      display: inline-block;
+      padding: 1rem;
+      font-size: 1.6rem;
+      transition: .3s;
+      &:hover {
+        font-weight: bold;
+        color: white;
+      }
+    }
+  }
+}
+.copy {
+  padding: 2rem 0rem;
+  background: #000918;
+  text-align: center;
+}

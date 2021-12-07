@@ -1,0 +1,22 @@
+// Banner
+.banner-bg {
+  background: url('img/banner.jpg') no-repeat center;
+  background-size: cover;
+}
+.banner {
+  min-height: 80rem;
+  display: flex;
+  align-items: center;
+  padding: 0rem 1rem;
+  .text-banner {
+    max-width: 70rem;
+    h1 {
+      color: white;
+    }
+    > p {
+      margin: 3rem 0rem;
+      font-weight: bold;
+    color: white;
+    }
+  }
+}
