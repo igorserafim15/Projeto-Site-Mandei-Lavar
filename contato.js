@@ -29,18 +29,16 @@ navLink.forEach(link => {
 })
 
 
-
-
 // Dropdown Faq
 const dtFaq = document.querySelectorAll('.faq-accordion dt')
 
 function toggleAccordionFaq() {
   dtFaq.forEach(i => {
-    i.classList.remove('show')
-    i.nextElementSibling.classList.remove('show')
+    i.classList.remove('faq-show')
+    i.nextElementSibling.classList.remove('faq-show')
   })
-  this.classList.toggle('show')
-  this.nextElementSibling.classList.toggle('show')
+  this.classList.toggle('faq-show')
+  this.nextElementSibling.classList.toggle('faq-show')
 }
 
 dtFaq.forEach(dt => dt.addEventListener('click', toggleAccordionFaq))

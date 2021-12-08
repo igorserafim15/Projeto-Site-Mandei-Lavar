@@ -847,13 +847,17 @@ h4 {
 }
 .banner-contato-bg .banner-contato {
   min-height: 80rem;
+  max-height: 90rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 5rem;
-  padding: 0rem 1rem;
+  padding: 0rem 2rem;
 }
 .banner-contato-bg .banner-contato .text-banner {
-  flex: 3;
+  flex: 3 1 42rem;
+  max-width: 65rem;
 }
 .banner-contato-bg .banner-contato .text-banner h1 {
   color: white;
@@ -864,7 +868,8 @@ h4 {
   color: white;
 }
 .banner-contato-bg .banner-contato .banner-form {
-  flex: 2;
+  flex: 2 1 29rem;
+  max-width: 50rem;
   background: white;
   padding: 5rem;
   border-radius: 2rem;
@@ -909,8 +914,14 @@ h4 {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 900px) {
+  .banner-contato .text-banner {
+    text-align: center;
+    margin-top: 4rem;
+  }
+}
 .faq {
-  padding: 10rem 1rem 15rem;
+  padding: 10rem 2rem 5rem;
 }
 .faq span, .faq h2 {
   text-align: center;
@@ -923,6 +934,7 @@ h4 {
   margin-top: 8rem;
 }
 .faq .faq-container .faq-accordion {
+  min-height: 75rem;
   flex: 1;
 }
 .faq .faq-container .faq-accordion dt {
@@ -933,7 +945,7 @@ h4 {
   border-radius: 1rem;
   cursor: pointer;
 }
-.faq .faq-container .faq-accordion dt.show {
+.faq .faq-container .faq-accordion dt.faq-show {
   background: #F5F5F5;
   color: #041126;
   border-radius: 1rem 1rem 0 0;
@@ -948,7 +960,7 @@ h4 {
   transform: translateY(-3rem);
   transition: 0.2s;
 }
-.faq .faq-container .faq-accordion dd.show {
+.faq .faq-container .faq-accordion dd.faq-show {
   visibility: visible;
   opacity: 1;
   max-height: 30rem;
@@ -959,11 +971,30 @@ h4 {
   flex: 1;
 }
 
+@media only screen and (max-width: 900px) {
+  .faq {
+    padding-top: 40rem;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .faq .faq-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .faq .faq-container .faq-accordion {
+    max-width: 57rem;
+    min-height: 70rem;
+  }
+  .faq .faq-container .faq-img {
+    order: -1;
+    max-width: 57rem;
+  }
+}
 .testimonials-bg {
   background: #E3F0FE88;
 }
 .testimonials-bg .testimonials {
-  padding: 10rem 1rem 15rem;
+  padding: 10rem 2rem 15rem;
 }
 .testimonials-bg .testimonials h2, .testimonials-bg .testimonials span {
   text-align: center;
@@ -992,12 +1023,13 @@ h4 {
 }
 
 .clients {
-  padding: 10rem 1rem;
+  padding: 10rem 2rem;
   display: flex;
   justify-content: space-between;
   gap: 4rem;
+  overflow-y: auto;
 }
 .clients .client-brand {
-  flex: 1;
+  flex: 1 0 17rem;
   max-width: 20rem;
 }/*# sourceMappingURL=style.css.map */
