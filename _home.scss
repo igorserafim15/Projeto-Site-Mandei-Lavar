@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0rem 1rem;
+  padding: 0rem 2rem;
   .social {
     display: flex;
     gap: 2rem;
@@ -53,18 +53,29 @@
   min-height: 10rem;
   align-items: center;
   justify-content: space-between;
-  padding:  0rem 1rem;
+  padding:  0rem 2rem;
   .logo img {
     width: 12rem;
+  }
+  .btn-menu {
+    border: none;
+    background: transparent;
+  }
+  .btn-menu img {
+    padding: 1rem;
+    cursor: pointer;
+    width: 3.5rem;
+    display: none;
   }
   .header-menu {
     display: flex;
     align-items: center;
     gap: 1rem;
     li a {
+      display: inline-block;
       font-weight: bold;
       font-size: 1.6rem;
-      padding: 1.5rem;
+      padding: 1.3rem;
       &:hover {
         color: $color-1;
       }
@@ -78,13 +89,44 @@
   }
 }
 @include breackpoints(lge) {
-  .header-menu a.btn-2 {
+  .header-menu li a.btn-2 {
     display: none;
   }
 }
 @include breackpoints(med) {
-  .header .header-menu {
-    display: none;
+  .header .btn-menu img.btn-show {
+    display: initial;
+  }
+  .header {
+    position: relative;
+    .header-menu {
+      display: block;
+      position: absolute;
+      background: #f5f5f5;
+      width: 100%;
+      right: 0px;
+      top: 10rem;
+
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-30px);
+      transition: .3s;
+      li a {
+        display: block;
+        padding: 1.5rem 2rem;
+        &:hover {
+          background: $color-6;
+        }
+        &.btn-2 {
+          display: none;
+        }
+      }
+    }
+    .header-menu.menu-show {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 
@@ -97,7 +139,7 @@
   min-height: 80rem;
   display: flex;
   align-items: center;
-  padding: 0rem 1rem;
+  padding: 0rem 2rem;
   .text-banner {
     max-width: 70rem;
     h1 {
@@ -125,7 +167,7 @@
   gap: 2rem;
   position: relative;
   top: -18rem;
-  padding: 2rem 1rem;
+  padding: 2rem 2rem;
   overflow-x: auto;
   
   .services-details-box {
@@ -175,7 +217,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 6rem;
-  padding: 0rem 1rem 15rem;
+  padding: 0rem 2rem 15rem;
   justify-content: center;
   .about-img {
     flex: 1 1 41rem;
@@ -202,7 +244,7 @@
   background: $color-6;
 }
 .services {
-  padding: 10rem 1rem 25rem;
+  padding: 10rem 2rem 25rem;
   text-align: center;
   > span {
     justify-content: center;
@@ -250,7 +292,7 @@
 // Pricing
 .pricing {
   text-align: center;
-  padding: 10rem 1rem 15rem;
+  padding: 10rem 2rem 15rem;
   p {
     margin: 2rem auto 6rem;
     max-width: 60rem;
@@ -299,7 +341,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 5rem;
-  padding: 10rem 1rem 10rem;
+  padding: 10rem 3rem 10rem;
   > div {
     flex: 1 1 20rem;
     img {
