@@ -42,3 +42,14 @@ function toggleAccordionFaq() {
 }
 
 dtFaq.forEach(dt => dt.addEventListener('click', toggleAccordionFaq))
+
+
+// Carousel Swiper
+const swiper = new Swiper('.swiper-container', {
+  slidesPerView: 1,
+  pagination: {
+    el: '.swiper-pagination'
+  },
+  mousewheel: true,
+  keyboard: true
+})

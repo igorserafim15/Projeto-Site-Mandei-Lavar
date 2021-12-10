@@ -161,27 +161,44 @@
       justify-content: center;
       margin-bottom: 1rem;
     }
-    .testimonials-container {
-      margin-top: 7rem;
-      display: flex;
-      justify-content: center;
-      .testimonial-box {
-        max-width: 85rem;
-        margin: 0% 7rem;
-        background: white;
-        padding: 4rem 4rem 4rem 7rem;
-        border-radius: 2rem;
-        box-shadow: 5px 5px 20px #0002;
-        position: relative;
-        .te-photo {
-          width: 12rem;
-          position: absolute;
-          top: 2rem;
-          left: -7rem;
-        }
-      }
-    }
   }
+}
+.testimonials-container {
+  margin-top: 7rem;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  .testimonial-box {
+    max-width: 85rem;
+    background: white;
+    padding: 3rem;
+    position: relative;
+    margin: 2rem;
+    box-shadow: 5px 5px 20px #0001;
+    border-radius: 2rem;
+    // .te-photo {
+    //   width: 12rem;
+    //   position: absolute;
+    //   top: 2rem;
+    //   left: -7rem;
+    // }
+  }
+}
+
+/* swiper */
+
+.swiper-slide {
+  height: auto;
+  box-sizing: border-box;
+}
+
+.swiper-pagination-bullet {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.swiper-pagination-bullet-active {
+  background: #000;
 }
 
 // Clients
