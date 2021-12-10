@@ -994,6 +994,7 @@ h4 {
   background: #E3F0FE88;
 }
 .testimonials-bg .testimonials {
+  position: relative;
   padding: 10rem 2rem 15rem;
 }
 .testimonials-bg .testimonials h2, .testimonials-bg .testimonials span {
@@ -1024,13 +1025,12 @@ h4 {
   box-sizing: border-box;
 }
 
-.swiper-pagination-bullet {
-  width: 0.75rem;
-  height: 0.75rem;
+.swiper-pagination-bullets {
+  margin-bottom: 10rem;
 }
 
 .swiper-pagination-bullet-active {
-  background: #000;
+  background: #0086F6;
 }
 
 .clients {

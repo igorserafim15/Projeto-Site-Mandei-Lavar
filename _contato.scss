@@ -155,6 +155,7 @@
 .testimonials-bg {
   background: $color-6;
   .testimonials {
+    position: relative;
     padding: 10rem 2rem 15rem;
     h2, span {
       text-align: center;
@@ -192,13 +193,12 @@
   box-sizing: border-box;
 }
 
-.swiper-pagination-bullet {
-  width: 0.75rem;
-  height: 0.75rem;
+.swiper-pagination-bullets {
+  margin-bottom: 10rem;
 }
 
 .swiper-pagination-bullet-active {
-  background: #000;
+  background: $color-1;
 }
 
 // Clients
