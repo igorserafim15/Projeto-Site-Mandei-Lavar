@@ -192,11 +192,9 @@
   height: auto;
   box-sizing: border-box;
 }
-
 .swiper-pagination-bullets {
   margin-bottom: 10rem;
 }
-
 .swiper-pagination-bullet-active {
   background: $color-1;
 }
@@ -206,7 +204,7 @@
   padding: 10rem 2rem;
   display: flex;
   justify-content: space-between;
-  gap: 4rem;
+  gap: 10rem;
   overflow-y: auto;
   .client-brand {
     flex: 1 0 17rem;

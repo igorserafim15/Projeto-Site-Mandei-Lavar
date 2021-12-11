@@ -105,7 +105,7 @@
       background: #f5f5f5;
       width: 100%;
       right: 0px;
-      top: 10rem;
+      top: 9rem;
 
       visibility: hidden;
       opacity: 0;
@@ -153,9 +153,12 @@
   }
 }
 @include breackpoints(lge) {
-  .banner-bg .banner .text-banner {
-    margin: auto;
-    text-align: center;
+  .banner-bg .banner {
+    min-height: 65rem;
+    .text-banner {
+      margin: auto;
+      text-align: center;
+    }
   }
 }
 
@@ -299,6 +302,7 @@
 @include breackpoints(med) {
   .services .services-category .box {
     margin: 0% auto;
+    padding: 0.5rem;
     max-width: 46rem;
   }
 }
