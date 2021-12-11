@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500;700&family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@600&family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 
 img {
   max-width: 100%;
@@ -32,7 +32,7 @@ html {
 body * {
   font-family: 'Noto Sans', sans-serif;
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   line-height: 1.5;
   color: $color-5;
 }
@@ -72,9 +72,19 @@ h4{font-size: 2.4rem;}
 // Style UL
 .style-ul {
   margin: 3rem 0rem;
-  list-style-image: url(./img/icons/check.svg);
-  list-style-position: inside;
+  li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    > span > img {
+      width: 2.5rem;
+    }
+  }
+  li+li {
+    padding-top: 1.5rem;
+  }
 }
+
 
 //BREACKPOINTS
 $x-large: 1024px;

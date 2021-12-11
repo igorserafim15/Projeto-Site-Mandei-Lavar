@@ -3,7 +3,7 @@
   background: $color-3;
 }
 .upside {
-  min-height: 6rem;
+  min-height: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,7 +12,7 @@
     display: flex;
     gap: 2rem;
     li a img {
-      width: 3rem;
+      width: 2.7rem;
       transition: .3s;
       &:hover {
         transform: translateY(-3px);
@@ -21,7 +21,7 @@
   }
   .phone {
     background: $color-2;
-    min-height: 6rem;
+    min-height: 5rem;
     display: flex;
     gap: 2rem;
     align-items: center;
@@ -29,7 +29,7 @@
     p {
       color: white;
       font-weight: bold;
-      font-size: 2.2rem;
+      font-size: 2rem;
       transition: .3s;
       &:hover {
         color: $color-3;
@@ -50,12 +50,12 @@
 // Header
 .header {
   display: flex;
-  min-height: 10rem;
+  min-height: 9rem;
   align-items: center;
   justify-content: space-between;
   padding:  0rem 2rem;
   .logo img {
-    width: 12rem;
+    width: 11rem;
   }
   .btn-menu {
     border: none;
@@ -146,7 +146,7 @@
       color: white;
     }
     > p {
-      margin: 3rem 0rem;
+      margin: 1.5rem 0rem 3rem;
       font-weight: bold;
     color: white;
     }
@@ -212,6 +212,7 @@
   }
 }
 
+
 // About
 .about {
   display: flex;
@@ -233,9 +234,6 @@
       margin-top: 1.5rem;
     }
     
-    li+li {
-      padding-top: 1.5rem;
-    }
   }
 }
 
@@ -244,21 +242,26 @@
   background: $color-6;
 }
 .services {
-  padding: 10rem 2rem 25rem;
+  padding: 10rem 2rem 15rem;
   text-align: center;
+  position: relative;
   > span {
     justify-content: center;
   }
   h2 {
     margin: 1rem 0rem 6rem;
   }
+  p {
+    font-size: 1.6rem;
+  }
   .services-category {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+    min-height: 53rem;
+    overflow: hidden;
     .box {
-      flex: 1 1 30rem;
+      flex: 1;
       position: relative;
+      margin: 1.5rem;
       > div img {
         border-radius: 2.1rem;
       }
@@ -288,12 +291,35 @@
     }
   }
 }
+@include breackpoints(xlg) {
+  .services .services-category {
+    min-height: 62rem;
+  }
+}
+@include breackpoints(med) {
+  .services .services-category .box {
+    margin: 0% auto;
+    max-width: 46rem;
+  }
+}
+/* swiper */
+.swiper-slide {
+  height: auto;
+  box-sizing: border-box;
+}
+.swiper-pagination-bullets {
+  margin-bottom: 10rem;
+}
+
+.swiper-pagination-bullet-active {
+  background: $color-1;
+}
 
 // Pricing
 .pricing {
   text-align: center;
   padding: 10rem 2rem 15rem;
-  p {
+  > p {
     margin: 2rem auto 6rem;
     max-width: 60rem;
   }
@@ -313,18 +339,12 @@
         transform: translateY(-10px);
         box-shadow: 5px 5px 20px #0003;
       }
-      span {
+      > span {
         display: inline-block;
         font-size: 4rem;
         font-weight: bold;
         color: $color-1;
         margin-top: 2rem;
-      }
-      ul {
-        text-align: start;
-        li+li {
-          margin: 1.5rem 0rem;
-        }
       }
       > a {
         margin-top: 2rem;
@@ -341,12 +361,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: 5rem;
-  padding: 10rem 3rem 10rem;
+  padding: 9rem 3rem 10rem;
   > div {
     flex: 1 1 20rem;
     img {
-      width: 50%;
-      margin-bottom: 2rem;
+      width: 35%;
+      margin-bottom: 3rem;
     }
     h4 {
       color: $color-1;

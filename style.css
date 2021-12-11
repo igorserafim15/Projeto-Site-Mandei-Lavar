@@ -5,7 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500;700&family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@600&family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -389,7 +389,7 @@ html {
 body * {
   font-family: "Noto Sans", sans-serif;
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   line-height: 1.5;
   color: #62738F;
 }
@@ -439,8 +439,17 @@ h4 {
 
 .style-ul {
   margin: 3rem 0rem;
-  list-style-image: url(./img/icons/check.svg);
-  list-style-position: inside;
+}
+.style-ul li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.style-ul li > span > img {
+  width: 2.5rem;
+}
+.style-ul li + li {
+  padding-top: 1.5rem;
 }
 
 .btn-1 {
@@ -477,7 +486,7 @@ h4 {
 }
 
 .upside {
-  min-height: 6rem;
+  min-height: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -488,7 +497,7 @@ h4 {
   gap: 2rem;
 }
 .upside .social li a img {
-  width: 3rem;
+  width: 2.7rem;
   transition: 0.3s;
 }
 .upside .social li a img:hover {
@@ -496,7 +505,7 @@ h4 {
 }
 .upside .phone {
   background: #FFCD63;
-  min-height: 6rem;
+  min-height: 5rem;
   display: flex;
   gap: 2rem;
   align-items: center;
@@ -505,7 +514,7 @@ h4 {
 .upside .phone p {
   color: white;
   font-weight: bold;
-  font-size: 2.2rem;
+  font-size: 2rem;
   transition: 0.3s;
 }
 .upside .phone p:hover {
@@ -522,13 +531,13 @@ h4 {
 }
 .header {
   display: flex;
-  min-height: 10rem;
+  min-height: 9rem;
   align-items: center;
   justify-content: space-between;
   padding: 0rem 2rem;
 }
 .header .logo img {
-  width: 12rem;
+  width: 11rem;
 }
 .header .btn-menu {
   border: none;
@@ -620,7 +629,7 @@ h4 {
   color: white;
 }
 .banner .text-banner > p {
-  margin: 3rem 0rem;
+  margin: 1.5rem 0rem 3rem;
   font-weight: bold;
   color: white;
 }
@@ -703,17 +712,15 @@ h4 {
 .about .about-text p + p {
   margin-top: 1.5rem;
 }
-.about .about-text li + li {
-  padding-top: 1.5rem;
-}
 
 .services-bg {
   background: #E3F0FE88;
 }
 
 .services {
-  padding: 10rem 2rem 25rem;
+  padding: 10rem 2rem 15rem;
   text-align: center;
+  position: relative;
 }
 .services > span {
   justify-content: center;
@@ -721,14 +728,18 @@ h4 {
 .services h2 {
   margin: 1rem 0rem 6rem;
 }
+.services p {
+  font-size: 1.6rem;
+}
 .services .services-category {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  min-height: 53rem;
+  overflow: hidden;
 }
 .services .services-category .box {
-  flex: 1 1 30rem;
+  flex: 1;
   position: relative;
+  margin: 1.5rem;
 }
 .services .services-category .box > div img {
   border-radius: 2.1rem;
@@ -757,11 +768,36 @@ h4 {
   background: #0001;
 }
 
+@media only screen and (max-width: 1024px) {
+  .services .services-category {
+    min-height: 62rem;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .services .services-category .box {
+    margin: 0% auto;
+    max-width: 46rem;
+  }
+}
+/* swiper */
+.swiper-slide {
+  height: auto;
+  box-sizing: border-box;
+}
+
+.swiper-pagination-bullets {
+  margin-bottom: 10rem;
+}
+
+.swiper-pagination-bullet-active {
+  background: #0086F6;
+}
+
 .pricing {
   text-align: center;
   padding: 10rem 2rem 15rem;
 }
-.pricing p {
+.pricing > p {
   margin: 2rem auto 6rem;
   max-width: 60rem;
 }
@@ -782,18 +818,12 @@ h4 {
   transform: translateY(-10px);
   box-shadow: 5px 5px 20px #0003;
 }
-.pricing .pricing-container .price-box span {
+.pricing .pricing-container .price-box > span {
   display: inline-block;
   font-size: 4rem;
   font-weight: bold;
   color: #0086F6;
   margin-top: 2rem;
-}
-.pricing .pricing-container .price-box ul {
-  text-align: start;
-}
-.pricing .pricing-container .price-box ul li + li {
-  margin: 1.5rem 0rem;
 }
 .pricing .pricing-container .price-box > a {
   margin-top: 2rem;
@@ -807,14 +837,14 @@ h4 {
   display: flex;
   flex-wrap: wrap;
   gap: 5rem;
-  padding: 10rem 3rem 10rem;
+  padding: 9rem 3rem 10rem;
 }
 .footer > div {
   flex: 1 1 20rem;
 }
 .footer > div img {
-  width: 50%;
-  margin-bottom: 2rem;
+  width: 35%;
+  margin-bottom: 3rem;
 }
 .footer > div h4 {
   color: #0086F6;
@@ -1010,7 +1040,6 @@ h4 {
   overflow: hidden;
 }
 .testimonials-container .testimonial-box {
-  max-width: 85rem;
   background: white;
   padding: 3rem;
   position: relative;

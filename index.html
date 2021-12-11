@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
   <!-- Style CSS -->
   <link rel="stylesheet" href="style.css">
   <title>Mandei Lavar | Home</title>
@@ -39,13 +42,12 @@
     </button>
 
     <ul class="header-menu">
-      <li><a href="#">Home</a></li>
-      <li><a href="#about">Sobre</a></li>
-      <li><a href="#services">Serviços</a></li>
-      <li><a href="#pricing">Preços</a></li>
+      <li><a href="index.html#sobre">Sobre</a></li>
+      <li><a href="index.html#servicos">Serviços</a></li>
+      <li><a href="index.html#precos">Preços</a></li>
       <li><a href="contato.html">Contato</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a class="btn-2" href="#know-more">Saiba mais</a></li>
+      <li><a href="index.html#blog">Blog</a></li>
+      <li><a class="btn-2" href="contato.html#faq">Saiba mais</a></li>
     </ul>
   </header>
 
@@ -55,7 +57,7 @@
       <div class="text-banner">
         <h1>Faça a higienização do seu estofado com quem entende</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        <a href="#" class="btn-1">Solicitar orçamento</a>
+        <a href="contato.html" class="btn-1">Solicitar orçamento</a>
       </div>
 
     </div>
@@ -91,7 +93,7 @@
   </section>
 
   <!-- About -->
-  <section class="about container" id="about">
+  <section class="about container" id="sobre">
     <div class="about-img"><img src="img/image-about.jpg" alt="Homem higienizando estofado."></div>
 
     <div class="about-text">
@@ -100,54 +102,97 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
       <ul class="style-ul">
-        <li>Mais de 10 anos de mercado</li>
-        <li>Já atendemos milhares de clientes</li>
-        <li>Damos garantia no nosso serviço</li>
-        <li>Clientes 100% satisfeitos</li>
+        <li><span><img src="./img/icons/check.svg" alt=""></i></span>
+          <p>Mais de 10 anos de mercado</p>
+        </li>
+        <li><span><img src="./img/icons/check.svg" alt=""></i></span>
+          <p>Já atendemos milhares de clientes</p>
+        </li>
+        <li><span><img src="./img/icons/check.svg" alt=""></i></span>
+          <p>Damos garantia no nosso serviço</p>
+        </li>
+        <li><span><img src="./img/icons/check.svg" alt=""></i></span>
+          <p>Clientes 100% satisfeitos</p>
+        </li>
       </ul>
-      <a href="" class="btn-1">Solicitar orçamentos</a>
+
+      <a href="contato.html" class="btn-1">Solicitar orçamentos</a>
     </div>
   </section>
 
   <!-- Services  -->
-  <section class="services-bg" id="services">
+  <section class="services-bg" id="servicos">
     <div class="services container">
       <span class="sub-text">Nossas soluções</span>
       <h2>Conheça os nossos serviços</h2>
 
-      <div class="services-category">
-        <div class="box">
-          <div><img src="img/image-services1.jpg" alt="Higienização de Sofá"></div>
-          <div class="box-text">
-            <h4>Higienização de Sofá</h4>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, quidem hic</p>
-            <a href="">Saiba mais</a>
-          </div>
-        </div>
+      <div class="services-category swiper-container">
 
-        <div class="box">
-          <div><img src="img/image-services2.jpg" alt="Higienização de Veículos"></div>
-          <div class="box-text">
-            <h4>Higienização de Veículos</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam</p>
-            <a href="">Saiba mais</a>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="box">
+              <div><img src="img/image-services1.jpg" alt="Higienização de Sofá"></div>
+              <div class="box-text">
+                <h4>Higienização de Sofá</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, quidem hic</p>
+                <a href="">Saiba mais</a>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="box">
-          <div><img src="img/image-services-3.jpg" alt="Higienização de Carpete"></div>
-          <div class="box-text">
-            <h4>Higienização de Carpete</h4>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, beatae</p>
-            <a href="">Saiba mais</a>
+          <div class="swiper-slide">
+            <div class="box">
+              <div><img src="img/image-services2.jpg" alt="Higienização de Veículos"></div>
+              <div class="box-text">
+                <h4>Higienização de Veículos</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam</p>
+                <a href="">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="box">
+              <div><img src="img/image-services-3.jpg" alt="Higienização de Carpete"></div>
+              <div class="box-text">
+                <h4>Higienização de Carpete</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, beatae</p>
+                <a href="">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="box">
+              <div><img src="img/image-services2.jpg" alt="Higienização de Veículos"></div>
+              <div class="box-text">
+                <h4>Higienização de Veículos</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam</p>
+                <a href="">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="box">
+              <div><img src="img/image-services-3.jpg" alt="Higienização de Carpete"></div>
+              <div class="box-text">
+                <h4>Higienização de Carpete</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, beatae</p>
+                <a href="">Saiba mais</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
     </div>
   </section>
 
   <!-- Pricing  -->
-  <section class="pricing container" id="pricing">
+  <section class="pricing container" id="precos">
     <h2>Conheça os nossos planos</h2>
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
 
@@ -156,36 +201,60 @@
         <h4>Mensal</h4>
         <span>R$ 250</span>
         <ul class="style-ul">
-          <li>Higienização Pro</li>
-          <li>Lavagem de veículo</li>
-          <li>Disponibilidade</li>
-          <li>Atendimento Premium</li>
+          <li><span><img src="./img/icons/check.svg" alt=""></i></span>
+            <p>Higienização Pro</p>
+          </li>
+          <li><span><img src="./img/icons/check.svg" alt=""></i></span>
+            <p>Lavagem de veículo</p>
+          </li>
+          <li><span><img src="./img/icons/check.svg" alt=""></i></span>
+            <p>Disponibilidade</p>
+          </li>
+          <li><span><img src="./img/icons/check.svg" alt=""></i></span>
+            <p>Atendimento Premium</p>
+          </li>
         </ul>
-        <a href="" class="btn-1">Solicitar orçamento</a>
+        <a href="contato.html" class="btn-1">Solicitar orçamento</a>
       </div>
 
       <div class="price-box">
         <h4>Semestral</h4>
         <span>R$ 500</span>
         <ul class="style-ul">
-          <li>Higienização completa</li>
-          <li>Estética automotiva</li>
-          <li>Atendimento Premium</li>
-          <li>Disponível 24 horas</li>
+          <li><span><img src="./img/icons/check.svg" alt=""></i></span>
+            <p>Higienização completa</p>
+          </li>
+          <li><span><img src="./img/icons/check.svg" alt=""></i></span>
+            <p>Estética automotiva</p>
+          </li>
+          <li><span><img src="./img/icons/check.svg" alt=""></i></span>
+            <p>Atendimento Premium</p>
+          </li>
+          <li><span><img src="./img/icons/check.svg" alt=""></i></span>
+            <p>Disponível 24 horas</p>
+          </li>
         </ul>
-        <a href="" class="btn-1">Solicitar orçamento</a>
+        <a href="contato.html" class="btn-1">Solicitar orçamento</a>
       </div>
 
       <div class="price-box">
         <h4>Anual</h4>
         <span>R$ 900</span>
         <ul class="style-ul">
-          <li>Higienização completa</li>
-          <li>Estética automotiva</li>
-          <li>Atendimento Premium</li>
-          <li>Disponível 24 horas</li>
+          <li><span><img src="./img/icons/check.svg" alt=""></i></span>
+            <p>Higienização completa</p>
+          </li>
+          <li><span><img src="./img/icons/check.svg" alt=""></i></span>
+            <p>Estética automotiva</p>
+          </li>
+          <li><span><img src="./img/icons/check.svg" alt=""></i></span>
+            <p>Atendimento Premium</p>
+          </li>
+          <li><span><img src="./img/icons/check.svg" alt=""></i></span>
+            <p>Disponível 24 horas</p>
+          </li>
         </ul>
-        <a href="" class="btn-1">Solicitar orçamento</a>
+        <a href="contato.html" class="btn-1">Solicitar orçamento</a>
       </div>
 
     </div>
@@ -202,12 +271,12 @@
       <div class="footer-menu">
         <ul>
           <h4 class="sub-text">Navegação</h4>
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#services">Serviços</a></li>
-          <li><a href="#pricing">Preços</a></li>
-          <li><a href="#contact">Contato</a></li>
-          <li><a href="#blog">Blog</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#sobre">Sobre</a></li>
+          <li><a href="index.html#servicos">Serviços</a></li>
+          <li><a href="index.html#precos">Preços</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="index.html#blog">Blog</a></li>
         </ul>
       </div>
 
@@ -240,6 +309,9 @@
       <p>Todos os direitos reservados | Mandei Lavar</p>
     </div>
   </footer>
+
+  <!-- Swiper JS-->
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
   <script src="home.js"></script>
 </body>
