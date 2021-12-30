@@ -148,19 +148,27 @@
     > p {
       margin: 1.5rem 0rem 3rem;
       font-weight: bold;
-    color: white;
+      color: white;
     }
   }
 }
 @include breackpoints(lge) {
   .banner-bg .banner {
     min-height: 65rem;
+    align-items: flex-start;
     .text-banner {
-      margin: auto;
+      margin: 0% auto;
       text-align: center;
+      margin-top: 10rem;
     }
   }
 }
+@include breackpoints(sml) {
+  .banner-bg .banner .text-banner {
+    margin-top: 4rem;
+  }
+}
+
 
 // Services Details
 .services-details {
@@ -223,6 +231,7 @@
   gap: 6rem;
   padding: 0rem 2rem 15rem;
   justify-content: center;
+  margin-top: -5rem;
   .about-img {
     flex: 1 1 41rem;
     max-width: 57rem;

@@ -132,7 +132,7 @@
 }
 @include breackpoints(lge) {
   .faq {
-    padding-top: 40rem;
+    padding-top: 35rem;
   }
 }
 @include breackpoints(med) {
@@ -172,17 +172,21 @@
   .testimonial-box {
     // max-width: 85rem;
     background: white;
-    padding: 3rem;
+    padding: 2rem 4rem 3rem;
     position: relative;
     margin: 2rem;
     box-shadow: 5px 5px 20px #0001;
     border-radius: 2rem;
-    // .te-photo {
-    //   width: 12rem;
-    //   position: absolute;
-    //   top: 2rem;
-    //   left: -7rem;
-    // }
+    .te-photo {
+      width: 12rem;
+      clip-path: circle();
+    }
+    blockquote cite {
+      display: inline-block;
+      font-weight: bold;
+      color: $color-1;
+      margin-top: 1rem;
+    }
   }
 }
 
